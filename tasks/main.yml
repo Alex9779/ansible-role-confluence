@@ -148,7 +148,7 @@
     - { dest: "/opt/atlassian/confluence/confluence/WEB-INF/classes/crowd.properties", owner: "confluence", group: "confluence" }
     - { dest: "/opt/atlassian/confluence/confluence/WEB-INF/classes/seraph-config.xml", owner: "confluence", group: "confluence" }
   notify:
-    - systemctl daemon-reload
+    - confluence | systemctl daemon-reload
   tags: confluence
 
 - name: prepare files
@@ -172,6 +172,10 @@
     dest: "/opt/atlassian/confluence/version_{{ confluence_version }}"
     state: touch
   when: version_file.stat.exists == false
+  tags: confluence
+
+- name: flush handlers
+  meta: flush_handlers
   tags: confluence
 
 - name: enable service
