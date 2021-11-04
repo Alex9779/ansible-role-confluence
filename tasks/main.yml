@@ -90,6 +90,9 @@
     - dest: "{{ confluence_home }}"
       owner: "{{ confluence_owner }}"
       group: "{{ confluence_group }}"
+    - dest: "{{ confluence_catalina }}/confluence/WEB-INF/classes"
+      owner: "{{ confluence_owner }}"
+      group: "{{ confluence_group }}"
 
 - name: download archive
   ansible.builtin.shell: |
@@ -158,6 +161,12 @@
       src: "./templates/opt/atlassian/confluence/conf/server.xml.j2"
       owner: "{{ confluence_owner }}"
       group: "{{ confluence_group }}"
+    - dest: "{{ confluence_catalina }}/confluence/WEB-INF/classes/crowd.properties"
+      owner: "{{ confluence_owner }}"
+      group: "{{ confluence_group }}"
+    - dest: "{{ confluence_catalina }}/confluence/WEB-INF/classes/seraph-config.xml"
+      owner: "{{ confluence_owner }}"
+      group: "{{ confluence_group }}"
   notify:
     - confluence | systemctl daemon-reload
     - confluence | systemctl restart confluence.service
@@ -176,6 +185,12 @@
       group: "{{ confluence_group }}"
       mode: "0755"
     - dest: "{{ confluence_catalina }}/conf/server.xml"
+      owner: "{{ confluence_owner }}"
+      group: "{{ confluence_group }}"
+    - dest: "{{ confluence_catalina }}/confluence/WEB-INF/classes/crowd.properties"
+      owner: "{{ confluence_owner }}"
+      group: "{{ confluence_group }}"
+    - dest: "{{ confluence_catalina }}/confluence/WEB-INF/classes/seraph-config.xml"
       owner: "{{ confluence_owner }}"
       group: "{{ confluence_group }}"
   notify:

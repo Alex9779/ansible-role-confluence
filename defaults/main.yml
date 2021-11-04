@@ -62,3 +62,13 @@ confluence_jvm_support_recommended_args: >-
 
 # Session timeout (in minutes).
 confluence_session_timeout: "120"
+
+# Crowd SSO
+# before enabling the Confluence instance has to be configured for Crowd!
+# see https://confluence.atlassian.com/crowd/integrating-crowd-with-atlassian-confluence-198573.html
+confluence_crowdsso_enabled: "false"
+confluence_crowdsso_appname: "username"
+confluence_crowdsso_apppass: "password"
+confluence_crowdsso_apploginurl: "http://localhost:8095/crowd/console/"
+confluence_crowdsso_crowdserverurl: "http://localhost:8095/crowd/services/"
+confluence_crowdsso_crowdbaseurl: "http://localhost:8095/crowd/"
