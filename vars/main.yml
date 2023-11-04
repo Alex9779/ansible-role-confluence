@@ -29,7 +29,7 @@ _confluence_version:
   "7.17": "7.17.3"
 
 _confluence_download:
-  "7.16.16":
+  "7.19.16":
     url: "http://product-downloads.atlassian.com/software/confluence/downloads/atlassian-confluence-7.19.16.tar.gz"
     dest: "/var/cache/ansible/c2622446742a565270aa07847175bd697565bbafd8bf21d0be4bf20bb2b71b72/atlassian-confluence-7.19.16.tar.gz"
     checksum: "c2622446742a565270aa07847175bd697565bbafd8bf21d0be4bf20bb2b71b72"
