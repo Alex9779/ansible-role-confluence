@@ -31,8 +31,8 @@ _confluence_version:
 _confluence_download:
   "7.19.16":
     url: "http://product-downloads.atlassian.com/software/confluence/downloads/atlassian-confluence-7.19.16.tar.gz"
-    dest: "/var/cache/ansible/c2622446742a565270aa07847175bd697565bbafd8bf21d0be4bf20bb2b71b72/atlassian-confluence-7.19.16.tar.gz"
-    checksum: "c2622446742a565270aa07847175bd697565bbafd8bf21d0be4bf20bb2b71b72"
+    dest: "/var/cache/ansible/c7cb3a000949517c8a3e9649713e1645f85f229e79bee561f6750e35db848f70/atlassian-confluence-7.19.16.tar.gz"
+    checksum: "c7cb3a000949517c8a3e9649713e1645f85f229e79bee561f6750e35db848f70"
   "7.18.1":
     url: "http://product-downloads.atlassian.com/software/confluence/downloads/atlassian-confluence-7.18.1.tar.gz"
     dest: "/var/cache/ansible/304ab50129c951858fbeded9df4f9f513bfe42b0c8f97b1be5ef4ad1cf19b5d4/atlassian-confluence-7.18.1.tar.gz"
